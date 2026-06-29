@@ -66,3 +66,20 @@ The UI dashboard will start at [http://localhost:3000](http://localhost:3000). O
 * [x] Next.js frontend project scaffolded.
 * [x] Git repository initialized in the root folder.
 * [x] Environment files ready for key entries.
+
+## Day 2 Deliverables (Offline Local Audio Transcription)
+* [x] Installed `faster-whisper` inside the python virtual environment.
+* [x] Installed `ffmpeg` globally on the Windows machine via `winget` (Gyan.FFmpeg build) and added it to the Path.
+* [x] Wrote `backend/test_whisper.py` to auto-download standard JFK audio sample (`jfk.wav`) and transcribe it locally.
+* [x] Downloaded Whisper `base` model and ran local offline transcription.
+* [x] Confirmed 100% offline, zero-cost speech-to-text.
+
+### To Run the Whisper Local Test:
+Ensure your PowerShell session has refreshed paths (if you set up FFmpeg in this session), then run:
+```powershell
+cd backend
+.\venv\Scripts\activate
+python test_whisper.py
+```
+*(If your system does not support the script execution policy, use `.\venv\Scripts\python.exe test_whisper.py` instead).*
+
